@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://image-upload-task.herokuapp.com/',
+
 };
