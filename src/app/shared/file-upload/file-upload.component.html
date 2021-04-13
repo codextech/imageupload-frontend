@@ -1,0 +1,11 @@
+
+
+<button (click)="imageInput.click()" type="button" class="btn btn-primary btn-lg">
+  <div *ngIf="uploading; else uploaded" class="spinner-border text-light" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <ng-template #uploaded>
+    <ng-content ></ng-content>
+  </ng-template>
+</button>
+<input #imageInput style="display: none;" type="file"  accept="image/*" (change)="fileChangeEvent($event)" />
